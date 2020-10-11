@@ -224,6 +224,7 @@
           switch (this.shell) {
             case 'bash':
               completionPath = path.join(this.HOME, `.${this.program}`, 'completion.sh');
+              completionPath = completionPath.split(path.sep).join('/');
               return `source ${completionPath}`;
             case 'zsh':
               return `. <(${this.program} --completion)`;
