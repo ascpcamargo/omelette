@@ -210,7 +210,7 @@
         fileAtHome = fileAt(this.HOME);
         switch (this.shell = this.getActiveShell()) {
           case 'bash':
-            return fileAtHome('.bash_profile');
+            return fileAtHome('.bashrc');
           case 'zsh':
             return fileAtHome('.zshrc');
           case 'fish':
