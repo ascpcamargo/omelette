@@ -50,7 +50,7 @@
         this.fragment = parseInt(process.argv[this.compgen + 1]) - (isZsh ? 1 : 0);
         this.line = process.argv.slice(this.compgen + 3).join(' ');
         this.word = (ref = this.line) != null ? ref.trim().split(/\s+/).pop() : void 0;
-        ({HOME: this.HOME, SHELL: this.SHELL} = process.env);
+        ({HOME: this.HOME, SHELL: this.SHELL = 'bash'} = process.env);
         this.mainProgram = function() {};
       }
 
